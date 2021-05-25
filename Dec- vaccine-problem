@@ -1,0 +1,38 @@
+#include <iostream>
+#include<cmath>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int d1 ,v1 ,d2,v2, n ,days = 1, tt =0 ,count =0 ,ck=0;
+        cin>>d1>>v1>>d2>>v2>>n ;
+        
+       while(n>tt)
+       {
+           if(d1>d2)
+           {
+               tt = tt + v2 ;
+               days = d2 ;
+               d2++ ;
+           }
+            if(d2>d1)
+           {
+               tt = tt + v1 ;
+               days = d1 ;
+               d1++ ;
+           }
+            if(d1 == d2)
+           {
+               tt = tt + v2 + v1 ;
+               days = d1 ;
+               d2++ ;
+               d1++ ;
+           }
+       }
+    	
+    
+    	std::cout << days << std::endl;
+    	
+	
+	return 0;
+}
